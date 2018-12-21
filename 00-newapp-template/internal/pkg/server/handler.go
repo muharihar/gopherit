@@ -9,7 +9,7 @@ import (
 )
 
 func (server *Server) Shutdown(w http.ResponseWriter, r *http.Request) {
-	server.Log.Debugf("/shutdown called - begining server shutdown")
+	server.Log.Debugf("/shutdown called - beginning server shutdown")
 
 	w.Write([]byte("bye felcia"))
 	timeout, _ := context.WithTimeout(server.Context, 5*time.Second)

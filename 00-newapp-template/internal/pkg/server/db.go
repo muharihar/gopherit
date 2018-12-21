@@ -14,7 +14,7 @@ func NewDB() (s SimpleDB) {
 		{ID: "1", Name: "Gopher1", Description: "The first Gopher (#1st)"},
 		{ID: "2", Name: "Gopher2", Description: "The second Gopher (#2nd)"},
 		{ID: "4", Name: "Gopher4", Description: "The fourth Gopher (#4th)"},
-		{ID: "8", Name: "Gopher8", Description: "The eigth Gopher (#8th)"},
+		{ID: "8", Name: "Gopher8", Description: "The eighth Gopher (#8th)"},
 	}
 
 	s.things = []acme.Thing{

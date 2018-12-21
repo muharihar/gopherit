@@ -7,6 +7,8 @@ import (
 	"strings"
 )
 
+// Delete uses a configured adapter to delete matching gopher.
+// Returns all other gophers not deleted.
 func Delete(a *adapter.Adapter, cli ui.CLI) (gophers map[string]adapter.Gopher) {
 	gopherID := a.Config.Client.GopherID
 	thingID := a.Config.Client.ThingID

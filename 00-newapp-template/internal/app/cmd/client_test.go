@@ -83,7 +83,7 @@ func ClientTests(t *testing.T) {
 
 func SetupConfig(c *pkg.Config) {
 	c.Server.ListenPort = "10201"
-	// Use a different port than the DEFAULT, then we can paralel tests
+	// Use a different port than the DEFAULT, then we can parallel tests
 	c.Client.BaseURL = "http://localhost:10201"
 	// Test cases are run from the package folder containing the source file.
 	c.TemplateFolder = "./../../../config/template/"

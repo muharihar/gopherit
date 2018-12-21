@@ -14,14 +14,16 @@ import (
 	"text/template"
 )
 
+// App is created from package main. App handles the configuration and cobra/viper.
 type App struct {
 	Config  *pkg.Config
 	RootCmd *cobra.Command
 }
 
-// The first entry becomes default when a 'command' is ommitted (ie. the default command.)
+// CommandList entry[0] becomes default when a 'command' is omitted
 var CommandList = []string{"client", "server", "version"}
 
+// NewApp contructs the command line and configuration
 func NewApp() (a App) {
 	a.Config = pkg.NewConfig()
 	a.RootCmd = new(cobra.Command)
@@ -85,7 +87,7 @@ func NewApp() (a App) {
 
 	return
 }
-
+// Main pases control over to the root cobra command.
 func (a *App) Main() {
 	// Check if first param & last param if the user wants the Help/Usage
 	// NOTE: the "&&" is short-circuited
@@ -113,6 +115,7 @@ func (a *App) Main() {
 	return
 }
 
+// UsageTemplate renders the usage/help/man pages for a cmdeighth
 func UsageTemplate(name string, data interface{}) (usage string) {
 	var raw bytes.Buffer
 	var err error

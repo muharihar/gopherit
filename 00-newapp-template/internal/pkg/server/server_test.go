@@ -10,7 +10,7 @@ import (
 func TestServerStart(t *testing.T) {
 
 	c := pkg.NewConfig()
-	c.Server.ListenPort = "20102" // Use a different port than the DEFAULT, then we can paralel tests
+	c.Server.ListenPort = "20102" // Use a different port than the DEFAULT, then we can parallel tests
 
 	t.Parallel()
 

@@ -27,7 +27,7 @@ func (f *Filter) Gophers(in []acme.Gopher) (out []acme.Gopher) {
 	gopherID := f.Config.Client.GopherID
 	name := f.Config.Client.GopherName
 
-	// IDs can be comma separated and don't guaranted just ONE match.
+	// IDs can be comma separated and don't guaranteed just ONE match.
 	if gopherID != "" {
 		gg := strings.Split(gopherID, ",")
 		for i := range gg {
@@ -57,7 +57,7 @@ func (f *Filter) Things(in []acme.Thing) (out []acme.Thing) {
 	name := f.Config.Client.ThingName
 	gopherID := f.Config.Client.GopherID
 
-	// IDs can be comma separated and don't guaranted just ONE match.
+	// IDs can be comma separated and don't guaranteed just ONE match.
 	if thingID != "" {
 		gg := strings.Split(thingID, ",")
 		for i := range gg {

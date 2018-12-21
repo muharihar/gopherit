@@ -8,6 +8,8 @@ import (
 	"strings"
 )
 
+// List uses a configured adapter to list matching gopher/things.
+// Returns all matching gophers
 func List(adapter *adapter.Adapter, cli ui.CLI) (gophers map[string]adapter.Gopher) {
 	log := adapter.Config.Log
 
