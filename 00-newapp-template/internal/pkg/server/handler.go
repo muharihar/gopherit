@@ -12,12 +12,13 @@ func (server *Server) Shutdown(w http.ResponseWriter, r *http.Request) {
 	server.Log.Debugf("/shutdown called - beginning server shutdown")
 
 	w.Write([]byte("bye felcia"))
-	timeout, _ := context.WithTimeout(server.Context, 5*time.Second)
+	timeout, cancel := context.WithTimeout(server.Context, 5*time.Second)
 	err := server.HTTP.Shutdown(timeout)
 	if err != nil {
 		server.Log.Errorf("server error during shutdown: %+v", err)
 	}
 	server.Finished()
+	cancel()
 }
 
 func (server *Server) Gophers(w http.ResponseWriter, r *http.Request) {
