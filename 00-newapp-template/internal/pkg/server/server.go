@@ -28,7 +28,7 @@ func NewServer(context context.Context, listenPort string, log *log.Logger) (ser
 	return
 }
 
-func (server *Server) ListenAndServe() (err error){
+func (server *Server) ListenAndServe() (err error) {
 	server.hookShutdownSignal()
 
 	go func() {

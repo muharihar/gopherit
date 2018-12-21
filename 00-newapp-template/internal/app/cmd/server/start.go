@@ -10,6 +10,6 @@ func Start(context context.Context, port string, log *log.Logger) {
 	s := server.NewServer(context, port, log)
 	s.NewRouter()
 	s.ListenAndServe()
-	
+
 	return
 }

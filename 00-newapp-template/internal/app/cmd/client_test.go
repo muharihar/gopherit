@@ -42,7 +42,6 @@ func StartServerRunTests(t *testing.T, f func(*testing.T)) {
 	}
 }
 
-
 func ClientTests(t *testing.T) {
 	t.Run("Gopher.List", func(t *testing.T) {
 		c := pkg.NewConfig()

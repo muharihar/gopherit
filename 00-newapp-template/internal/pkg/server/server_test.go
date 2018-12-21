@@ -27,5 +27,4 @@ func TestServerStart(t *testing.T) {
 		s.Finished()
 	}
 
-
 }

@@ -45,8 +45,8 @@ func (cli *CLI) Render(name string, data interface{}) (usage string) {
 	var raw bytes.Buffer
 	var err error
 
-	templateDir:= cli.Config.TemplateFolder
-	templateDir = strings.TrimSuffix(templateDir,"/")
+	templateDir := cli.Config.TemplateFolder
+	templateDir = strings.TrimSuffix(templateDir, "/")
 
 	t := template.New("")
 	t, err = t.Funcs(

@@ -66,7 +66,7 @@ func ServiceTests(t *testing.T) {
 	})
 	t.Run("Service.DELETE.Thing.NOAUTH", func(t *testing.T) {
 		ss := acme.NewService(config.Client.BaseURL, "", "")
-		things := ss.DeleteThing("2","2")
+		things := ss.DeleteThing("2", "2")
 		if things != nil {
 			t.Fail()
 		}
@@ -74,7 +74,7 @@ func ServiceTests(t *testing.T) {
 
 	t.Run("Service.DELETE.Thing.AUTHORIZED", func(t *testing.T) {
 		ss := acme.NewService(config.Client.BaseURL, "notempty", "notempty")
-		things := ss.DeleteThing("2","2")
+		things := ss.DeleteThing("2", "2")
 		if len(things) != 2 {
 			t.Fail()
 		}
